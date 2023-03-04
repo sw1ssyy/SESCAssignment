@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Students</title>
+    <link rel="stylesheet"  th:href="@{/css/Students.css}">
+</head>
+<body>
+<h1>Student List</h1>
+<div class="course-table">
+
+    <table>
+        <tr th:each="student: ${students}">
+            <td th:text="${student.ID}"></td>
+            <td th:text="${student.EXTERNAL_ID}"></td>
+            <td th:text="${student.FORENAME}"></td>
+            <td th:text="${student.SURNAME}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
