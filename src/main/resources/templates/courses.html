@@ -6,10 +6,20 @@
     <link rel="stylesheet"  th:href="@{/css/Courses.css}">
 </head>
 <body>
+<div class="buttons">
+    <button class="view_all_button">View All Courses</button>
+    <button class="SearchCourses">Search Courses</button>
+</div>
 <h1>Course List</h1>
 <div class="course-table">
 
 <table>
+    <tr>
+        <th>Course ID</th>
+        <th>Course Name</th>
+        <th>Course Description</th>
+        <th>Course Fee</th>
+    </tr>
    <tr th:each="course : ${courses}">
        <td th:text="${course.id}"/>
        <td th:text="${course.title}"/>

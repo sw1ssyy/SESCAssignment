@@ -13,9 +13,8 @@ import java.util.Set;
 @Configuration
 public class MiscellaneousBeans {
 
-
     @Bean
-    CommandLineRunner initDatabase(StudentRepo repo) {
+    CommandLineRunner initDatabase(StudentRepo studentRepo) {
         return args -> {
             Course SESC = new Course();
             SESC.setTitle("SESC");
@@ -44,7 +43,7 @@ public class MiscellaneousBeans {
             Scott.setEXTERNAL_ID("C3231879");
             Scott.setCoursesEnrolledIn(Set.of(CloudComputing, Dissertation));
 
-            repo.saveAll(Set.of(Scott,John));
+            studentRepo.saveAll(Set.of(Scott,John));
 
         };
 

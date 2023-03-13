@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Search</title>
+</head>
+<body>
+<div class="course-table">
+
+  <table>
+    <tr>
+      <th>Course ID</th>
+      <th>Course Name</th>
+      <th>Course Description</th>
+      <th>Course Fee</th>
+    </tr>
+    <tr th:each="course : ${results}">
+      <td th:text="${course.id}"/>
+      <td th:text="${course.title}"/>
+      <td th:text="${course.description}"/>
+      <td th:text="${course.fee}"/>
+
+    </tr>
+  </table>
+</div>
+</body>
+</html>
